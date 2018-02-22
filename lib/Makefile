@@ -2,7 +2,7 @@ ROOT=..
 include $(ROOT)/Make.defines.linux
 
 LIBMISC = libapue.a
-OBJS = error.o
+OBJS = error.o setfl.o
 
 #all: $(LIBMISC) sleep.o
 all: $(LIBMISC)
