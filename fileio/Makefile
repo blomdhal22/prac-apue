@@ -1,15 +1,14 @@
 ROOT=..
 include $(ROOT)/Make.defines.linux
 
-PROGS = seek hole
+PROGS = fileflags hole mycat seek
 
-all: $(PROGS)
+all: $(PROGS) setfl.o
 
 %:	%.c $(LIBAPUE)
 	$(CC) $(CFLAGS) $@.c -o $@ $(LDFLAGS) $(LDLIBS)
 
 clean:
-	rm -f $(PROGS) $(TEMPFILES) *.o
+	rm -f $(PROGS) $(TEMPFILES) *.o file.hole
 
 include $(ROOT)/Make.libapue.inc
-
