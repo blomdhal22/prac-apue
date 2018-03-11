@@ -1,7 +1,7 @@
 ROOT=..
 include $(ROOT)/Make.defines.linux
 
-PROGS = filetype access umask changemode unlink
+PROGS = tempfiles memstr
 
 all: $(PROGS)
 
@@ -12,4 +12,3 @@ clean:
 	rm -f $(PROGS) $(TEMPFILES) *.o
 
 include $(ROOT)/Make.libapue.inc
-
